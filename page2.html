@@ -68,6 +68,18 @@
                     document.title = originalTitle;
                 }
             });
+            function openCloaked() {
+                var win = window.open(); // Opens a new about:blank window
+                var url = "https://charlieruark1-tech.github.io/WGMSUB/page3.html"; // Replace with your target URL
+
+                var iframe = win.document.createElement("iframe");
+                iframe.style.width = "100%";
+                iframe.style.height = "100%";
+                iframe.style.border = "none";
+                iframe.src = url;
+
+                win.document.body.appendChild(iframe);
+            }
         </script>
     </head>
     <body>
@@ -81,7 +93,8 @@
             ></a>
         </div>
         <a href="/stickmn/index.html">
-            <button id="buttons" style="background-image: url(stickpng.png)"></button>
+            <button id="buttons" title="Sticman dismounting" style="background-image: url(stickpng.png)"></button>
         </a>
+        <button onclick="openCloaked()">Cloak</button>
     </body>
 </html>
