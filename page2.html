@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Classroom</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            .zg-grid {
+                grid-template-columns: repeat(auto-fill, 50px) !important;
+                gap: 4px !important;
+            }
+            .zg-card {
+                width: 50px !important;
+                height: 50px !important;
+                min-width: 50px !important;
+                min-height: 50px !important;
+            }
+            .zg-cover {
+                width: 50px !important;
+                height: 50px !important;
+                object-fit: cover !important;
+            }
+            .zg-title {
+                display: none !important;
+            }
+            body {
+                background-color: rgb(246, 115, 115);
+            }
+            #arrows {
+                width: 50px;
+                height: 50px;
+                background-image: url(leftarrow.png);
+                background-size: contain;
+                border-radius: 10px;
+                left: 38%;
+                position: absolute;
+                top: 28px;
+                background-color: rgb(115, 246, 115);
+                transition: transform 0.3s ease-in-out;
+                outline-color: darkgreen;
+                border: none;
+            }
+
+            #arrows:hover {
+                transform: scale(1.1);
+            }
+
+            #topbr {
+                width: 200vh;
+                height: 100px;
+                background-color: rgb(152, 255, 97);
+                text-align: center;
+                font-size: 80px;
+                font-family: "Pixelify Sans", sans-serif;
+            }
+            #buttons {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                top: 10px;
+                border-radius: 10px;
+                border: none;
+                background-size: 100px 100px;
+                justify-content: center;
+                align-items: center;
+                transition: transform 0.3s ease-in-out;
+            }
+            #buttons:hover {
+                transform: scale(1.1);
+            }
+        </style>
+        <script>
+            const originalTitle = document.title;
+
+            document.addEventListener("visibilitychange", () => {
+                if (document.hidden) {
+                    document.title = "New Tab";
+                } else {
+                    document.title = originalTitle;
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="topbr">
+            Page 2
+            <a href="index.html" style="text-decoration: none; color: inherit">
+                <button id="arrows"></button>
+            </a>
+            <a href="page3.html"><button style="left: 80%; background-image: url(right\ arrow.png);" id="arrows"></button></a>
+        </div>
+        
+            ></button>
+        </a>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom</title>
+
+    <style>
+        body{
+            background-color: rgb(246, 115, 115);
+
+        }
+        #games{
+            background-color: rgba(255, 0, 0, 0);
+        }
+        #topbr{
+          width: 200vh;
+          height: 100px;
+          background-color: rgb(152, 255, 97);
+          text-align: center;
+          font-size: 80px;
+            font-family: "Pixelify Sans", sans-serif;
+
+        }
+
+        #arrows {
+           width: 50px;
+           height: 50px;
+           background-image: url(right\ arrow.png);
+           background-size: contain;
+           border-radius: 10px;
+           left: 120vh;
+           position: absolute;
+           top: 28px;
+           background-color: rgb(115, 246, 115);
+           transition: transform 0.3s ease-in-out;
+           outline-color: darkgreen;
+           border: none;
+  
+}
+
+#arrows:hover {
+  transform: scale(1.1);
+}
+
+    </style>
+    <script>
+    const originalTitle = document.title;
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        document.title = "New Tab";
+        
+      } else {
+        document.title = originalTitle;
+      }
+    });
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+    <div id="topbr">Page 1
+          <a href="page2.html"  style=" text-decoration: none;    color: inherit;">
+            <button id="arrows"></button>
+          </a> 
+    <div id="games"></div>
+
+<script
+  src="lumin.min.js"
+></script>
+<script>
+  Lumin.init({
+    container: '#games',
+    theme: 'dark'
+  });
+</script>
+</body>
+</html>
